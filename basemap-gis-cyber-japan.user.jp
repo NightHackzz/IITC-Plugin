@@ -4,8 +4,8 @@
 // @category       Map Tiles
 // @version        0.1.1.20171206
 // @namespace      https://github.com/NightHackzz/IITC-Plugin
-// @updateURL      https://github.com/NightHackzz/IITC-Plugin/base-map-gis-cyber-japan.user.js
-// @downloadURL    https://github.com/NightHackzz/IITC-Plugin/base-map-gis-cyber-japan.user.js
+// @updateURL      https://raw.githubusercontent.com/NightHackzz/IITC-Plugin/master/basemap-gis-cyber-japan.user.jp
+// @downloadURL    https://raw.githubusercontent.com/NightHackzz/IITC-Plugin/master/basemap-gis-cyber-japan.user.jp
 // @description    [NHZ-20171206] Add the native GIS Cyber Japan map tiles as an optional layer.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
@@ -17,11 +17,6 @@
 // @match          http://*.ingress.com/mission/*
 // @grant          none
 // ==/UserScript==
-
-@@PLUGINSTART@@
-
-// PLUGIN START ////////////////////////////////////////////////////////
-
 
 // use own namespace for plugin
 window.plugin.mapGISCyberJapan = {
@@ -48,5 +43,3 @@ window.plugin.mapGISCyberJapan = {
 var setup =  window.plugin.mapGISCyberJapan.addLayer;
 
 // PLUGIN END //////////////////////////////////////////////////////////
-
-@@PLUGINEND@@
