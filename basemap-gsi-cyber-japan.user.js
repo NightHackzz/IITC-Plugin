@@ -6,7 +6,7 @@
 // @namespace      https://github.com/NightHackzz/IITC-Plugin
 // @updateURL      https://raw.githubusercontent.com/NightHackzz/IITC-Plugin/master/basemap-gsi-cyber-japan.user.js
 // @downloadURL    https://raw.githubusercontent.com/NightHackzz/IITC-Plugin/master/basemap-gsi-cyber-japan.user.js
-// @description    [NHZ-20171206.9] Add the native GSI Cyber Japan map tiles as an optional layer.
+// @description    [NHZ-20171206.10] Add the native GSI Cyber Japan map tiles as an optional layer.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
