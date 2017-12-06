@@ -2,11 +2,11 @@
 // @id             iitc-plugin-basemap-gsicyberjapan
 // @name           IITC plugin: GSI Cyber Japan map tiles
 // @category       Map Tiles
-// @version        0.0.10.20171206172600
+// @version        0.0.11.20171206173300
 // @namespace      https://github.com/NightHackzz/IITC-Plugin
 // @updateURL      https://raw.githubusercontent.com/NightHackzz/IITC-Plugin/master/basemap-gsi-cyber-japan.user.js
 // @downloadURL    https://raw.githubusercontent.com/NightHackzz/IITC-Plugin/master/basemap-gsi-cyber-japan.user.js
-// @description    [NHZ-20171206.10] Add the native GSI Cyber Japan map tiles as an optional layer.
+// @description    [NHZ-20171206.11] Add the native GSI Cyber Japan map tiles as an optional layer.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -23,7 +23,7 @@ function wrapper(plugin_info) {
     if(typeof window.plugin !== 'function') window.plugin = function() {};
 
     plugin_info.buildName = 'gsi-cyber-japan';
-    plugin_info.dateTimeVersion = '20171206172600';
+    plugin_info.dateTimeVersion = '20171206173300';
     plugin_info.pluginId = 'gsi-cyber-japan';
 
 	var setup = function ()
