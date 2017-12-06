@@ -2,11 +2,11 @@
 // @id             iitc-plugin-basemap-gsicyberjapan
 // @name           IITC plugin: GSI Cyber Japan map tiles
 // @category       Map Tiles
-// @version        0.1.1.20171206
+// @version        20171206.4
 // @namespace      https://github.com/NightHackzz/IITC-Plugin
-// @updateURL      https://raw.githubusercontent.com/NightHackzz/IITC-Plugin/master/basemap-gis-cyber-japan.user.jp
-// @downloadURL    https://raw.githubusercontent.com/NightHackzz/IITC-Plugin/master/basemap-gis-cyber-japan.user.jp
-// @description    [NHZ-20171206] Add the native GIS Cyber Japan map tiles as an optional layer.
+// @updateURL      https://raw.githubusercontent.com/NightHackzz/IITC-Plugin/master/basemap-gsi-cyber-japan.user.jp
+// @downloadURL    https://raw.githubusercontent.com/NightHackzz/IITC-Plugin/master/basemap-gsi-cyber-japan.user.jp
+// @description    [NHZ-20171206] Add the native GSI Cyber Japan map tiles as an optional layer.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -22,24 +22,23 @@
 function wrapper(plugin_info) {
     if(typeof window.plugin !== 'function') window.plugin = function() {};
 
-    plugin_info.buildName = 'gis-cyber-japan';
-    plugin_info.dateTimeVersion = '20171206.0002';
-    plugin_info.pluginId = 'gis-cyber-japan';
-
-	window.plugin.mapGISCyberJapan = function () {};
+    plugin_info.buildName = 'gsi-cyber-japan';
+    plugin_info.dateTimeVersion = '20171206.0004';
+    plugin_info.pluginId = 'gsi-cyber-japan';
 
 	var setup = function ()
 	{
 		// 国土地理院 tiles
 
 		var gisOpt = {
-		  attribution: 'Map data GIS Cyber Japan',
+		  attribution: 'Map Data Japan GSI',
 		  maxNativeZoom: 18,
 		  maxZoom: 18,
 		};
 
 		var layers = {
-		  'https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png' : 'GIS Japan Tile',
+		  'https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png' : 'Japan GSI Standard',
+          'https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg' : 'Japan GSI Seamless'
 		};
 
 		for(var url in layers) {
@@ -62,6 +61,3 @@ if (typeof GM_info !== 'undefined' && GM_info && GM_info.script) info.script = {
 script.appendChild(document.createTextNode('('+ wrapper +')('+JSON.stringify(info)+');'));
 (document.body || document.head || document.documentElement).appendChild(script);
 
-
-
-// PLUGIN END //////////////////////////////////////////////////////////

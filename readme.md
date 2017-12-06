@@ -1,11 +1,16 @@
 # IITC Plugin実験所
 
 ## 国土地理院Tileをベースマップに追加
-地図データは、国土地理院の[標準地図タイル](http://maps.gsi.go.jp/development/ichiran.html#std)を使用しています。
+国土地理院の次の2つのタイルをベースレイヤーに設定します。
+1. [標準地図](http://maps.gsi.go.jp/development/ichiran.html#std)」
+2. [写真](http://maps.gsi.go.jp/development/ichiran.html#seamlessphoto)
 
-[Plugin-Download](https://raw.githubusercontent.com/NightHackzz/IITC-Plugin/master/basemap-gis-cyber-japan.user.js)
 
-BASE LAYERに「GIS Japan Tile」が追加されますので、選択してください。
+[ダウンロードはここを選択](https://raw.githubusercontent.com/NightHackzz/IITC-Plugin/master/basemap-gis-cyber-japan.user.js)
+
+BASE LAYERに以下2つのレイヤーが現れますので、選択してください。
+1. 標準地図:「Japan GSI Standard」
+2. 写真:「Japan GSI Seamless」
 
 #### 利用条件
 1. [国土地理院コンテンツ利用規約](http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html)に同意できない場合は、導入しないでください。
