@@ -2,7 +2,7 @@
 // @id             iitc-plugin-basemap-gsicyberjapan
 // @name           IITC plugin: GSI Cyber Japan map tiles
 // @category       Map Tiles
-// @version        0.0.9.20171206172100
+// @version        0.0.9
 // @namespace      https://github.com/NightHackzz/IITC-Plugin
 // @updateURL      https://raw.githubusercontent.com/NightHackzz/IITC-Plugin/master/basemap-gsi-cyber-japan.user.js
 // @downloadURL    https://raw.githubusercontent.com/NightHackzz/IITC-Plugin/master/basemap-gsi-cyber-japan.user.js
