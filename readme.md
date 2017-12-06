@@ -6,7 +6,7 @@
 2. [写真](http://maps.gsi.go.jp/development/ichiran.html#seamlessphoto)
 
 
-[ダウンロードはここを選択](https://raw.githubusercontent.com/NightHackzz/IITC-Plugin/master/basemap-gis-cyber-japan.user.js)
+[ダウンロードはここを選択](https://raw.githubusercontent.com/NightHackzz/IITC-Plugin/master/basemap-gsi-cyber-japan.user.js)
 
 BASE LAYERに以下2つのレイヤーが現れますので、選択してください。
 1. 標準地図:「Japan GSI Standard」
