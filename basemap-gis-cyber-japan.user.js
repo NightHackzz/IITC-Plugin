@@ -19,27 +19,48 @@
 // ==/UserScript==
 
 // use own namespace for plugin
-window.plugin.mapGISCyberJapan = {
-  addLayer: function() {
-    // 国土地理院 tiles
+function wrapper(plugin_info) {
+    if(typeof window.plugin !== 'function') window.plugin = function() {};
 
-    var gisOpt = {
-      attribution: 'Map data GIS Cyber Japan',
-      maxNativeZoom: 18,
-      maxZoom: 18,
-    };
+    plugin_info.buildName = 'gis-cyber-japan';
+    plugin_info.dateTimeVersion = '20171206.0001';
+    plugin_info.pluginId = 'gis-cyber-japan';
 
-    var layers = {
-      'https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png' : 'GIS Japan Tile',
-    };
+	window.plugin.mapGISCyberJapan = function () {};
 
-    for(var url in layers) {
-      var layer = new L.TileLayer(url, gisOpt);
-      layerChooser.addBaseLayer(layer, layers[url]);
-    }
-  },
-};
+	window.plugin.mapGISCyberJapan.setup = function ()
+	{
+		// 国土地理院 tiles
 
-var setup =  window.plugin.mapGISCyberJapan.addLayer;
+		var gisOpt = {
+		  attribution: 'Map data GIS Cyber Japan',
+		  maxNativeZoom: 18,
+		  maxZoom: 18,
+		};
+
+		var layers = {
+		  'https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png' : 'GIS Japan Tile',
+		};
+
+		for(var url in layers) {
+		  var layer = new L.TileLayer(url, gisOpt);
+		  layerChooser.addBaseLayer(layer, layers[url]);
+		}
+	}
+
+    setup.info = plugin_info; //add the script info data to the function as a property
+    if(!window.bootPlugins) window.bootPlugins = [];
+    window.bootPlugins.push(setup);
+    // if IITC has already booted, immediately run the 'setup' function
+    if(window.iitcLoaded && typeof setup === 'function') setup();
+
+} // wrapper end
+// inject code into site context
+var script = document.createElement('script');
+var info = {};
+if (typeof GM_info !== 'undefined' && GM_info && GM_info.script) info.script = { version: GM_info.script.version, name: GM_info.script.name, description: GM_info.script.description };
+script.appendChild(document.createTextNode('('+ wrapper +')('+JSON.stringify(info)+');'));
+(document.body || document.head || document.documentElement).appendChild(script);
+
 
 // PLUGIN END //////////////////////////////////////////////////////////
