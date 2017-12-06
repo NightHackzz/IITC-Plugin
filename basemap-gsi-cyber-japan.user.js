@@ -23,7 +23,7 @@ function wrapper(plugin_info) {
     if(typeof window.plugin !== 'function') window.plugin = function() {};
 
     plugin_info.buildName = 'gsi-cyber-japan';
-    plugin_info.dateTimeVersion = '20171206170900';
+    plugin_info.dateTimeVersion = '20171206171500';
     plugin_info.pluginId = 'gsi-cyber-japan';
 
 	var setup = function ()
