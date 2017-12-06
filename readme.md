@@ -2,7 +2,7 @@
 
 ## 国土地理院Tileをベースマップに追加
 国土地理院の次の2つのタイルをベースレイヤーに設定します。
-1. [標準地図](http://maps.gsi.go.jp/development/ichiran.html#std)」
+1. [標準地図](http://maps.gsi.go.jp/development/ichiran.html#std)
 2. [写真](http://maps.gsi.go.jp/development/ichiran.html#seamlessphoto)
 
 
