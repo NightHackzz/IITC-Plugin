@@ -15,7 +15,7 @@
 
 BASE LAYERに以下2つのレイヤーが現れますので、選択してください。
 - 標準地図:「Japan GSI Standard」
-- 写真:「Japan GSI Seamless」
+- 航空写真:「Japan GSI Seamless」
 
 #### 利用条件
 1. [国土地理院コンテンツ利用規約](http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html)に同意できない場合は、導入しないでください。
