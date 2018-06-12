@@ -2,7 +2,7 @@
 // @id             iitc-plugin-basemap-gsicyberjapan
 // @name           IITC plugin: GSI Cyber Japan map tiles
 // @category       Map Tiles
-// @version        0.0.12.20180605233500
+// @version        0.0.13.20180612.01
 // @namespace      https://github.com/NightHackzz/IITC-Plugin
 // @updateURL      https://raw.githubusercontent.com/NightHackzz/IITC-Plugin/master/basemap-gsi-cyber-japan.user.js
 // @downloadURL    https://raw.githubusercontent.com/NightHackzz/IITC-Plugin/master/basemap-gsi-cyber-japan.user.js
@@ -23,7 +23,7 @@ function wrapper(plugin_info) {
     if(typeof window.plugin !== 'function') window.plugin = function() {};
 
     plugin_info.buildName = 'gsi-cyber-japan';
-    plugin_info.dateTimeVersion = '20180605233500';
+    plugin_info.dateTimeVersion = '20180612190600';
     plugin_info.pluginId = 'gsi-cyber-japan';
 
 	var setup = function ()
@@ -34,10 +34,13 @@ function wrapper(plugin_info) {
 		  attribution: 'Map Data Japan GSI',
 		  maxNativeZoom: 18,
 		  maxZoom: 21,
+          reuseTiles: true,
+          detectRetina : true
 		};
 
 		var layers = {
 		  'https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png' : 'Japan GSI Standard',
+		  'https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png' : 'Japan GSI Pale',
           'https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg' : 'Japan GSI Seamless'
 		};
 
